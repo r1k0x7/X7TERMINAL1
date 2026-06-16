@@ -25,16 +25,6 @@ const config: Config = {
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
-      animation: {
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-      },
-      keyframes: {
-        glow: {
-          '0%': { boxShadow: '0 0 5px #00ff88' },
-          '100%': { boxShadow: '0 0 20px #00ff88, 0 0 40px #00ff88' },
-        },
-      },
     },
   },
   plugins: [],
