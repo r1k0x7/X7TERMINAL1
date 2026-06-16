@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --terminal-bg: #0a0a0f;
+    --terminal-panel: #12121a;
+    --terminal-border: #1e1e2e;
+    --terminal-accent: #00ff88;
+    --terminal-accent2: #00d4ff;
+    --terminal-danger: #ff4757;
+    --terminal-warning: #ffa502;
+    --terminal-text: #e0e0e0;
+    --terminal-muted: #6b7280;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #1e1e2e #0a0a0f;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #0a0a0f;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #1e1e2e;
+    border-radius: 3px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: #2a2a3e;
+  }
+}
+
+@layer components {
+  .terminal-panel {
+    @apply bg-terminal-panel border border-terminal-border rounded-lg;
+  }
+
+  .terminal-header {
+    @apply flex items-center justify-between px-4 py-2 border-b border-terminal-border;
+  }
+
+  .terminal-title {
+    @apply text-sm font-semibold text-terminal-accent uppercase tracking-wider;
+  }
+
+  .terminal-value {
+    @apply font-mono text-lg font-semibold;
+  }
+
+  .terminal-change-up {
+    @apply text-terminal-accent;
+  }
+
+  .terminal-change-down {
+    @apply text-terminal-danger;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 10px currentColor;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
