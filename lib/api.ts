@@ -2,45 +2,22 @@
 // FREE API CONFIGURATION - X7 Terminal
 // ==========================================
 
-// CoinGecko API (Free - No API Key Required)
 const COINGECKO_API = 'https://api.coingecko.com/api/v3';
-
-// Binance API (Free - Public Endpoints)
 const BINANCE_API = 'https://api.binance.com/api/v3';
 const BINANCE_FAPI = 'https://fapi.binance.com/fapi/v1';
 const BINANCE_WS = 'wss://stream.binance.com:9443/ws';
 const BINANCE_FWS = 'wss://fstream.binance.com/ws';
-
-// Finnhub API (Free Tier - 60 calls/minute)
 const FINNHUB_API = 'https://finnhub.io/api/v1';
 const FINNHUB_KEY = process.env.NEXT_PUBLIC_FINNHUB_KEY || '';
-
-// Financial Modeling Prep (Free Tier)
 const FMP_API = 'https://financialmodelingprep.com/api/v3';
 const FMP_KEY = process.env.NEXT_PUBLIC_FMP_KEY || '';
-
-// Alpha Vantage (Free Tier - 25 calls/day)
-const AV_API = 'https://www.alphavantage.co/query';
-const AV_KEY = process.env.NEXT_PUBLIC_AV_KEY || '';
-
-// Frankfurter API (Free - No Key Required)
 const FRANKFURTER_API = 'https://api.frankfurter.app';
-
-// FRED API (Free - API Key Required)
 const FRED_API = 'https://api.stlouisfed.org/fred';
 const FRED_KEY = process.env.NEXT_PUBLIC_FRED_KEY || '';
-
-// World Bank API (Free - No Key Required)
 const WB_API = 'https://api.worldbank.org/v2';
-
-// NewsAPI (Free Tier - 100 requests/day)
 const NEWS_API = 'https://newsapi.org/v2';
 const NEWS_KEY = process.env.NEXT_PUBLIC_NEWS_KEY || '';
-
-// USGS Earthquake API (Free)
 const USGS_API = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0';
-
-// OpenWeatherMap (Free Tier)
 const OWM_API = 'https://api.openweathermap.org/data/2.5';
 const OWM_KEY = process.env.NEXT_PUBLIC_OWM_KEY || '';
 
@@ -446,5 +423,4 @@ export function getChangeColor(value: number): string {
 
 export function getChangeBg(value: number): string {
   return value >= 0 ? 'bg-terminal-accent/10' : 'bg-terminal-danger/10';
-  }
-      
+}

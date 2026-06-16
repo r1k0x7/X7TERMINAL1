@@ -43,7 +43,6 @@ export function useCryptoWebSocket(symbols: string[]) {
     ws.onclose = () => {
       setWsConnected(false);
       console.log('❌ Binance WebSocket disconnected');
-      // Auto reconnect after 5 seconds
       setTimeout(() => useCryptoWebSocket(symbols), 5000);
     };
 
@@ -55,7 +54,7 @@ export function useCryptoWebSocket(symbols: string[]) {
     return () => {
       ws.close();
     };
-  }, [symbols.join(',')]);
+  }, [symbols.join(','), updateCryptoPrice, setWsConnected]);
 
   return wsRef;
 }
@@ -85,7 +84,7 @@ export function useTradeStream(symbol: string) {
     };
 
     return () => ws.close();
-  }, [symbol]);
+  }, [symbol, addTrade]);
 }
 
 // ==========================================
